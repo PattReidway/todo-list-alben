@@ -5,8 +5,9 @@ require_once "database/functions.php";
 try {
     $dbCo = new PDO(
         'mysql:host=localhost;dbname=todolist;charset=utf8',
-        'Benal',
-        'Benal'
+        'Cloud',
+        'Ethan1109@Arya'
+        
     );
 
 
