@@ -20,7 +20,7 @@
     </div>
     <div>
         <ul class="task-list">
-            <li class="task"><input type="checkbox" class="checkbox"/><h2>jhgflgf</h2></li>
+            <li class="task"><input type="checkbox" class="checkbox"/><h2>jhgflgf</h2><input type="image" class="image2" src = "img/optionButton.png" alt="optionButton img"><input type="image" src = "img/DeleteButton.png" alt="delete_button img"></li> 
             <li class="task"><input type="checkbox" class="checkbox"/><h2>2315jkbg</h2></li>
             <li class="task"><input type="checkbox" class="checkbox"/><h2>khg</h2></li>
             <li class="task"><input type="checkbox" class="checkbox"/><h2>hchchchclkhohc</h2></li>

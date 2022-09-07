@@ -122,9 +122,13 @@ body.dark-template {
     display: flex;
 }
 
+.task input {
+    width: 40px;
+}
 
-
-
+.image2 {
+    width: 300px;
+}
 
 
 
