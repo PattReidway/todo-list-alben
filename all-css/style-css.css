@@ -1,0 +1,131 @@
+/* DON'T TOUCH THIS CSS FILE !!! */
+
+:root {
+    font-size: 16px;
+
+    /* Colors */
+    --bg-color: #bfc7c7;
+    --bg-blue: #090c11;
+    --bg-sandbox: #dbdbdb;
+    --white: #fff;
+    --black: #000;
+}
+
+/* NORMALIZER */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a, a:active, a:focus, a:hover {
+    text-decoration: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* UTILITIES */
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+body.dark-template {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--white);
+}
+
+.main-ttl {
+    text-align: center;
+}
+
+/* Navigation */
+
+.header {
+    background-color: var(--bg-blue);
+    border-radius: 1rem 1rem 1rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: .5rem 1rem 0 1rem;
+}
+
+.main-nav {
+    padding: 2rem 0;
+}
+.main-nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem
+}
+
+.main-nav-link {
+    display: block;
+    text-align: center;
+    background-color: var(--white);
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    transition: background .3s ease;
+}
+.main-nav-link:hover, .main-nav-link.active {
+    background-color: var(--bg-color);
+    color: var(--white);
+}
+
+@media screen and  (min-width: 768px) {
+    .main-nav-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+/* Task List*/
+
+.task-list{
+    
+}
+
+/* Task */
+
+.task {
+    color: #000;
+    display: flex;
+}
+
+
+
+
+
+
+
+
