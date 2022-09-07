@@ -31,22 +31,18 @@ p {
     padding: 0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+
 
 a, a:active, a:focus, a:hover {
     text-decoration: none;
 }
-
+/*
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
-}
+}*/
 
 /* UTILITIES */
 
@@ -66,6 +62,7 @@ body.dark-template {
 
 .main-ttl {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Navigation */
@@ -76,6 +73,10 @@ body.dark-template {
     margin-top: 1rem;
     margin-bottom: 2rem;
     padding: .5rem 1rem 0 1rem;
+    display: flex;
+}
+.main-ttl{
+    display: flex;
 }
 
 .main-nav {
@@ -110,9 +111,9 @@ body.dark-template {
 }
 
 /* Task List*/
-
 .task-list{
-    
+    display: grid;
+    align-items: center;
 }
 
 /* Task */
@@ -122,10 +123,21 @@ body.dark-template {
     display: flex;
 }
 
+/* FOOTER */
+.footer {
+    background-color: #000;
+    padding: 2rem;
+    text-align: center;
+    font-size: .8rem;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
 
-
-
-
+.add-button{
+    width: 10rem;
+    height: 2rem;
+}
 
 
 
