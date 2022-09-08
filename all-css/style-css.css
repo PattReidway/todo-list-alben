@@ -4,7 +4,7 @@
     font-size: 16px;
 
     /* Colors */
-    --bg-color: #bfc7c7;
+    --bg-color: #2ca1a1;
     --bg-blue: #090c11;
     --bg-sandbox: #dbdbdb;
     --white: #fff;
@@ -147,4 +147,7 @@ body.dark-template {
     width: 10rem;
     height: 2rem;
 }
+
+
+/* ADD PAGE */
 
