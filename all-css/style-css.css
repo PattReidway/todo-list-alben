@@ -123,6 +123,15 @@ body.dark-template {
     display: flex;
 }
 
+.redbutton {
+    width: 2rem;
+}
+
+.image2 {
+    width: 2rem;
+}
+
+
 /* FOOTER */
 .footer {
     background-color: #000;
@@ -138,6 +147,4 @@ body.dark-template {
     width: 10rem;
     height: 2rem;
 }
-
-
 

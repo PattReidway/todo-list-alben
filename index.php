@@ -44,7 +44,7 @@ try {
         <ul class="task-list">
                 <?php
                         foreach ($arrayTask as $task) {
-                            echo "<li>".$task["description"]."</li>";
+                            echo "<li>"."<input type=checkbox>".$task["description"]."<input type=\"image\" class=\"image2\" src = \"img/optionButton.png\" alt=\"optionButton img\"><input class=\"redbutton\" type=\"image\" src = \"img/redbutton.png\" alt=\"delete_button img\">"."</li>";
                         }
                 
                 ?>
