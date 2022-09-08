@@ -52,7 +52,8 @@ try {
             </ul>       
         </div>
         <footer class="footer">
-    <input type="button" class="add-button" value="ADD TASK">
+    
+<a href="./add-page.php" target="_blank"> <input type="button" class="add-button" value="ADD TASK" > </a>
     </footer>
 </body>
 </html>
