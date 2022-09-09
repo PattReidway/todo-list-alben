@@ -3,6 +3,10 @@ $pageNumber=1;
 $pageTitle = "My Todo List";
 require_once "database/functions.php";
 include 'include/header.php';
+
+$query = $dbCo->prepare("SELECT * FROM task WHERE done = 0;");
+        $query->execute();
+        $arrayTask = $query->fetchAll();
 ?>
 
 

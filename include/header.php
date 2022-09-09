@@ -21,10 +21,6 @@ try {
  catch (Exception $e) {
     die("Unable to connect to the database." . $e->getMessage());
 }
-
-    $query = $dbCo->prepare("SELECT * FROM task;");
-    $query->execute();
-    $arrayTask = $query->fetchAll();
     
     ?>
 
