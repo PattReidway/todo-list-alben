@@ -121,6 +121,17 @@ body.dark-template {
 .task {
     color: #000;
     display: flex;
+    align-items: center;
+    list-style:none;
+}
+
+.lili {
+    display: flex;
+    flex-direction: row;
+}
+
+.greenbutton {
+    width: 2rem;
 }
 
 .redbutton {
