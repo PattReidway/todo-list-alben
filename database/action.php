@@ -23,6 +23,6 @@
         ]);
     
     }
-    header('Location: http://localhost/grandprojet2/');
+    header('Location: http://localhost/Todo-list-alben/');
     exit
 ?>
