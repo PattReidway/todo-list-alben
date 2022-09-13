@@ -23,6 +23,36 @@
         ]);
     
     }
+
+    if (isset($_POST['id_task']) && $_POST['action'] === 'up' && isset($_POST('id_task')){
+        $query1 = $dbCo->prepare("UPDATE tasks"
+        SET priority = priority -1
+        WHERE priority = $orderTaks AND done = 0;")";
+        $squery->execute();
+    }
+
+    // foreach($_POST["priority"] as $orderTask) {
+    //     sort($orderTask)
+    //     var_dump($ordertask)
+    // }
+
+    $orderTask = $dbCo->prepare("UPDATE INTO 'task' ('priority') VALUES (:number)");
+    $orderTask->execute([
+        "priority" => 
+    ])
+
+    $orderTask = $dbCo->query("SELECT priority FROM task");
+    $orderTask->execute();
+    $resultOrder = $orderTask->fetchAll();
+    sort($resultOrder);
+
+    
+    // foreach($resultOrder as priorityOrder)
+
+
+    var_dump($orderTask);
+
+
     header('Location: http://localhost/grandprojet2/');
     exit
 ?>
