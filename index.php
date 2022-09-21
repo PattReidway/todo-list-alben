@@ -15,9 +15,7 @@ $query = $dbCo->prepare("SELECT * FROM task WHERE done = 0 ORDER BY priority ASC
         <ul class="task-list">
                 <?php
                         foreach ($arrayTask as $task) {
-<<<<<<< HEAD
-                            echo "<li class=\"lili\">"."<a href=\"database/action.php?action=done&id_task=".$task["id_task"]."\" ><img src=\"img/greenbutton.png\"class=\"greenbutton\" alt\"valid_button></a>".$task["description"]."<input type=\"image\" class=\"image2\" src = \"img/optionButton.png\" alt=\"optionButton img\"><input class=\"redbutton\" type=\"image\" src = \"img/redbutton.png\" alt=\"delete_button img\">"."</li>";
-=======
+
                             echo "<li class=\"lili\">
                             <a href=\"database/action.php?action=down&id_task=".$task["id_task"]."\"><img src=\"img/down.png\"class=\"downbutton\" alt\"down_button></a>"
                             ."<a href=\"database/action.php?action=up&id_task=".$task["id_task"]."\"><img src=\"img/up.png\"class=\"upbutton\" alt\"up_button></a>"
@@ -25,7 +23,7 @@ $query = $dbCo->prepare("SELECT * FROM task WHERE done = 0 ORDER BY priority ASC
                             <img src=\"img/greenbutton.png\"class=\"greenbutton\" alt\"valid_button></a>".$task["priority"].$task["description"]."
                             <input type=\"image\" class=\"image2\" src = \"img/optionButton.png\" alt=\"optionButton img\">
                             <input class=\"redbutton\" type=\"image\" src = \"img/redbutton.png\" alt=\"delete_button img\">"."</li>";
->>>>>>> 5446152dfc47ccc1d52e158457f119b004d62623
+
                         }
                 ?>
             </ul>       
