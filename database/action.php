@@ -22,6 +22,9 @@
             "done" => 1
         ]);
     }
+
+    
+=======
 // ------------------------------------- priority of the task
     $query = $dbCo->prepare("SELECT priority
     FROM task
@@ -78,7 +81,8 @@ var_dump(isset($_GET['action']) , $_GET['action'] === "down" , isset($_GET["id_t
                 $action = "up";
          }
 
-    header('Location: http://localhost/grandprojet2/');
+    header('Location: http://localhost/Todo-list-alben/');
+
     exit
 ?>
 
