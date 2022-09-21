@@ -1,4 +1,12 @@
 <?php
+spl_autoload_register();
+use App\Controllers\TaskController;
+$task = new TaskController;
+$task->index();
+exit;
+
+
+
 $pageNumber=1;
 $pageTitle = "My Todo List";
 require_once "database/functions.php";
@@ -15,7 +23,10 @@ $query = $dbCo->prepare("SELECT * FROM task WHERE done = 0;");
         <ul class="task-list">
                 <?php
                         foreach ($arrayTask as $task) {
-                            echo "<li class=\"lili\">"."<a href=\"database/action.php?action=done&id_task=".$task["id_task"]."\" ><img src=\"img/greenbutton.png\"class=\"greenbutton\" alt\"valid_button></a>".$task["description"]."<input type=\"image\" class=\"image2\" src = \"img/optionButton.png\" alt=\"optionButton img\"><input class=\"redbutton\" type=\"image\" src = \"img/redbutton.png\" alt=\"delete_button img\">"."</li>";
+                            echo "<li class=\"lili\">"."<a href=\"database/action.php?action=done&id_task=".$task["id_task"]."\" ><img src=\"img/greenbutton.png\"class=\"greenbutton\" alt\"valid_button></a>"
+                            ."<span class=task2>".$task["description"]."</span>".
+                            "<a href=\"modifTask.php?action=edit&id_task=".$task["id_task"]."\"target=\"_blank\"><img src=\"img/optionbutton.png\" class=\"image2\" alt=\"optionButton</a>"
+                           ."<input class=\"redbutton\" type=\"image\" src = \"img/redbutton.png\" alt=\"delete_button img\">"."</li>";
                         }
                 
                 ?>
