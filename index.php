@@ -3,7 +3,7 @@ spl_autoload_register();
 use App\Controllers\TaskController;
 $task = new TaskController;
 $task->index();
-exit;
+
 
 
 
