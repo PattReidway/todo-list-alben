@@ -3,6 +3,7 @@ spl_autoload_register();
 use App\Controllers\TaskController;
 $task = new TaskController;
 $task->index();
+exit;
 
 
 
@@ -21,15 +22,17 @@ $query = $dbCo->prepare("SELECT * FROM task WHERE done = 0 ORDER BY priority ASC
     </div>
     <div>
         <ul class="task-list">
-        foreach ($arrayTask as $task) {
 
-            
-        }
+       
             </ul>       
         </div>
         <footer class="footer">
-    
-<a href="./add-page.php" target="_blank"> <input type="button" class="add-button" value="ADD TASK" > </a>
-    </footer>
-</body>
-</html>
+            
+            <a href="./add-page.php" target="_blank"> <input type="button" class="add-button" value="ADD TASK" > </a>
+        </footer>
+    </body>
+    </html>
+    <!-- foreach ($arrayTask as $task) {
+
+
+    } -->

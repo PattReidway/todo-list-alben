@@ -51,4 +51,8 @@ class View
 
         echo $this->getHTML();
     }
+    protected function addData(string $key,string $html):void{
+        $this->data[$key]=$html;
+    }
+    
 }

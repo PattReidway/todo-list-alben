@@ -1,15 +1,25 @@
 <?php
+session_start();
+$_SERVER['HTTP_REFERER'];
+if($_SERVER['HTTP_REFERER'] <> "http://localhost/Todo-list-alben/"){
+    echo "DEGAGE TA MERE";
+    exit;
+}
 $pageNumber=2;
 $pageTitle = "ADD TASK";
 require_once "database/functions.php";
 include 'include/header.php';
-if(isset($_POST)&& isset($_POST["taskDesc"])) {
+if (isset($_POST) && isset($_POST["taskDesc"])) {
+    if ($_POST['token'] <> $_SESION['securityAddToken']) {
+        var_dump($_POST['token']);
+        echo "ALERTE MECHANT ALERTE MECHANT!!!!!!!";
+    }
     $_POST["taskDesc"] = strip_tags($_POST["taskDesc"]);
     $_POST["priority"] = strip_tags($_POST["priority"]);
     $_POST["date"] = strip_tags($_POST["date"]);
-    if(strlen($_POST["taskDesc"]) <= 255){
-            $_POST['color']= str_replace('#','',$_POST['color'] );
-            $query = $dbCo->prepare("INSERT INTO task (description,color,date_reminder,priority,id_users) 
+    if (strlen($_POST["taskDesc"]) <= 255) {
+        $_POST['color'] = str_replace('#', '', $_POST['color']);
+        $query = $dbCo->prepare("INSERT INTO task (description,color,date_reminder,priority,id_users) 
         VALUES (:description , :color, :date_reminder, :priority, :id_user)");
         $query->execute([
             "description" => $_POST['taskDesc'],
@@ -17,9 +27,12 @@ if(isset($_POST)&& isset($_POST["taskDesc"])) {
             "date_reminder" => $_POST['date'],
             "priority" => $_POST['priority'],
             "id_user" => 1,
-            
-        ]);}
+
+        ]);
     }
+} else {
+    $_SESSION['securityAddToken'] = md5(uniqid(mt_rand(), true));
+}
  
 ?>
 <div>
@@ -32,6 +45,7 @@ if(isset($_POST)&& isset($_POST["taskDesc"])) {
             <input type="number" class="num-choose" name="priority" min="1" max="99">
             <label for="theme-select">Choose a color:</label>
                 <input type="color" class="palette" name="color">
+                <input type="hidden" name="token"value="<?=$_SESSION['securityAddToken']?>">
         </div>
         <div class="submit-button">
             <input type="submit" value="Entrez!">
