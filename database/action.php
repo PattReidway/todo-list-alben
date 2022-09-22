@@ -23,7 +23,6 @@
         ]);
     }
 
-
 // ------------------------------------- priority of the task
     $query = $dbCo->prepare("SELECT priority
     FROM task
